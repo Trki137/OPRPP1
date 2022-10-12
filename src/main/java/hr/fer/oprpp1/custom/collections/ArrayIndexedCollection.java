@@ -85,8 +85,8 @@ public class ArrayIndexedCollection extends Collection{
 
         for(int i = index; i < size; i++){
 
-            if(i  == size-1)
-                elements[i-1] = null;
+            if(i  == size - 1)
+                elements[i] = null;
 
             elements[i] = elements[i+1];
         }
@@ -100,7 +100,7 @@ public class ArrayIndexedCollection extends Collection{
 
     @Override
     public boolean contains(Object value){
-        return indexOf(value) != -1 ? true: false;
+        return indexOf(value) != -1;
     }
 
     @Override
@@ -149,6 +149,10 @@ public class ArrayIndexedCollection extends Collection{
         for(int i = 0; i < this.size; i++)
             processor.process(this.elements[i]);
 
+    }
+    @Override
+    public String toString(){
+        return "" + elements.length;
     }
 
 
