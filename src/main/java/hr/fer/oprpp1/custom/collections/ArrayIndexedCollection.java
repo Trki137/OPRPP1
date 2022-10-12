@@ -7,7 +7,6 @@ public class ArrayIndexedCollection extends Collection{
 
     private int size; //current size of collection
     private Object[] elements;
-
     private static final int DEFAULT_ARRAY_SIZE = 16;
 
 
@@ -44,6 +43,7 @@ public class ArrayIndexedCollection extends Collection{
 
     public void insert(Object value, int position){
         if(position < 0 || position > size) throw new IndexOutOfBoundsException();
+        if(value == null) throw new NullPointerException();
 
         if(position == size) add(value);
         else{
@@ -105,6 +105,7 @@ public class ArrayIndexedCollection extends Collection{
 
     @Override
     public boolean remove(Object value){
+
         int index = indexOf(value);
         if (index == -1) return false;
         remove(index);
@@ -149,10 +150,6 @@ public class ArrayIndexedCollection extends Collection{
         for(int i = 0; i < this.size; i++)
             processor.process(this.elements[i]);
 
-    }
-    @Override
-    public String toString(){
-        return "" + elements.length;
     }
 
 
