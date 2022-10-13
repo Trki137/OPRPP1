@@ -71,7 +71,7 @@ public class LinkedListIndexedCollection extends Collection {
      * Inserts value in specific position
      *
      * Throws 2 exceptions:
-     *    - IndexOutOfBoundsException is thrown when position is greater then size of collecton or smaller then 0
+     *    - IndexOutOfBoundsException is thrown when position is greater then size of collection or smaller then 0
      *    - NullPointerException is thrown when null value occurs in {@param value}
      *
      * @param value value that we store in our collection
@@ -82,46 +82,38 @@ public class LinkedListIndexedCollection extends Collection {
     public void insert(Object value, int position){
         if(position < 0 || position > size) throw new IllegalArgumentException();
         if(value == null) throw new NullPointerException();
-        ListNode insertedNode = new ListNode(null,null,value);
-        ListNode node = firstNode;
-        int i = 0;
 
+        ListNode insertedNode = new ListNode(null,null,value);
+
+        int i = 0;
 
         if(position == size) add(value);
         else if(position == 0){
+
             firstNode.prevNode = insertedNode;
             insertedNode.nextNode = firstNode;
             firstNode = insertedNode;
             size++;
+
         } else {
-            boolean finished = false;
-            while (node != null && !finished){
-
-                if(position == i){
-
-                    node.prevNode.nextNode = insertedNode;
-                    insertedNode.prevNode = node.prevNode;
-                    node.prevNode = insertedNode;
-                    insertedNode.nextNode = node;
-
-                    size++;
-                    finished = true;
-                }
-                i++;
-                node = node.nextNode;
-            }
-
+            ListNode foundNode = getNode(position);
+            foundNode.prevNode.nextNode = insertedNode;
+            insertedNode.prevNode = foundNode.prevNode;
+            foundNode.prevNode = insertedNode;
+            insertedNode.nextNode = foundNode;
+            size++;
         }
-
-        /**
-         * Returns index of element that we are searching
-         *
-         * @param value element that we are searching for
-         * @return -1 if element doesn't exists or value is null
-         *          Index of element if elements exists
-         */
     }
 
+
+
+    /**
+     * Returns index of element that we are searching
+     *
+     * @param value element that we are searching for
+     * @return -1 if element doesn't exists or value is null
+     *          Index of element if elements exists
+     */
     public int indexOf(Object value){
         if(value == null) return -1;
 
@@ -283,6 +275,52 @@ public class LinkedListIndexedCollection extends Collection {
     public void clear(){
         firstNode = lastNode = null;
         size = 0;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        ListNode node = firstNode;
+        while (node != null){
+            sb.append(node.value).append(" -> ");
+            node = node.nextNode;
+        }
+        return sb.toString();
+    }
+
+    /**
+     * Searches node in O(n/2 +1)
+     *
+     * @param position int param which tells us which position we need
+     * @return node that will use for inserting new node
+     */
+
+    private ListNode getNode(int position){
+        ListNode node;
+        if(position > 0 && position < size/2) {
+            int i = 0;
+            node = firstNode;
+
+            while (node != null) {
+
+                if (position == i) return node;
+                i++;
+                node = node.nextNode;
+
+            }
+        }else {
+            int i = size - 1;
+            node = lastNode;
+
+            while (node != null) {
+
+                if (position == i) return node;
+                i--;
+                node = node.prevNode;
+
+            }
+        }
+        return null;
     }
 
     /**

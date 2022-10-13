@@ -14,7 +14,10 @@ public class StackDemo {
      * @param args has exactly one postfix expression
      */
     public static void main(String[] args) {
-        if(args.length != 1) throw new IllegalArgumentException("Argument not valid");
+        if(args.length != 1) {
+            System.out.println("Argument not valid");
+            return;
+        }
         String[] arr = args[0].split(" ");
         ObjectStack stack = new ObjectStack();
         calculate(arr, stack);
