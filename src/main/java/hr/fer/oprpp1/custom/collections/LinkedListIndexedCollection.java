@@ -1,21 +1,55 @@
 package hr.fer.oprpp1.custom.collections;
 
-import java.nio.charset.UnsupportedCharsetException;
+/**
+ *
+ *
+ * @author Dean Trkulja
+ * @version 1.0
+ *
+ *
+ */
 
 public class LinkedListIndexedCollection extends Collection {
 
+    /**
+     * number of elements in collection
+     */
     private int size;
+    /**
+     * reference to the first node in list
+     */
     private ListNode firstNode;
+    /**
+     *  reference to the last node in list
+     */
     private ListNode lastNode;
+
+    /**
+     * Default construct where we set size to 0 and {@code firstNode} and {@code lastNode} to null
+     */
 
     public LinkedListIndexedCollection(){
         this.size = 0;
         this.firstNode = this.lastNode = null;
     }
-    public LinkedListIndexedCollection(Collection collection){
 
+    /**
+     * Copies elements from {@param collection} to our new collection
+     *
+     * @param collection elements of this collection are copied into our new collection
+     */
+    public LinkedListIndexedCollection(Collection collection){
         addAll(collection);
     }
+
+    /**
+     * Returns value of collection in position {@param index}
+     * Throws IndexOutOfBoundsException when index is smaller then 0 or greater then size
+     *
+     * @param index specifies index of element that we want to get
+     * @return element which is located at position {@param index}
+     *
+     */
 
     public Object get(int index){
         if(index < 0 || index > this.size - 1) throw  new IndexOutOfBoundsException();
@@ -31,6 +65,19 @@ public class LinkedListIndexedCollection extends Collection {
 
         return null;
     }
+
+    /**
+     *
+     * Inserts value in specific position
+     *
+     * Throws 2 exceptions:
+     *    - IndexOutOfBoundsException is thrown when position is greater then size of collecton or smaller then 0
+     *    - NullPointerException is thrown when null value occurs in {@param value}
+     *
+     * @param value value that we store in our collection
+     * @param position in which position do we want to store element, eligible value is between 0 and current size of collection
+     *
+     */
 
     public void insert(Object value, int position){
         if(position < 0 || position > size) throw new IllegalArgumentException();
@@ -66,9 +113,13 @@ public class LinkedListIndexedCollection extends Collection {
 
         }
 
-
-
-
+        /**
+         * Returns index of element that we are searching
+         *
+         * @param value element that we are searching for
+         * @return -1 if element doesn't exists or value is null
+         *          Index of element if elements exists
+         */
     }
 
     public int indexOf(Object value){
@@ -86,6 +137,13 @@ public class LinkedListIndexedCollection extends Collection {
 
         return foundPosition;
     }
+    /**
+     * Removes element in position {@param index}
+     * Throws IllegalArgumentException when index is greater then size - 1 or smaller then 0
+     *
+     * @param index element which is located at position {@param index} is deleted
+     */
+
     public boolean remove(int index){
         if(index < 0 || index > size - 1) throw new IllegalArgumentException();
 
@@ -116,12 +174,21 @@ public class LinkedListIndexedCollection extends Collection {
         return true;
         }
 
-
+    /**
+     * @return size of collection
+     */
     @Override
     public int size(){
         return this.size;
     }
 
+    /**
+     * Adds new element to collection, newly added element is lastNode in list
+     *
+     * Throws NullPointerException if {@param value} is null
+     *
+     * @param value value that we want to store in collection
+     */
     @Override
     public void add(Object value){
         if(value == null) throw new NullPointerException();
@@ -134,10 +201,16 @@ public class LinkedListIndexedCollection extends Collection {
             this.lastNode.nextNode = newNode;
 
         this.lastNode = newNode;
-        //System.out.println(newNode.prevNode +" , "+ newNode.nextNode + " , " + value);
         size++;
     }
 
+    /**
+     * Checks if element exists in collection
+     *
+     * @param value element that we are searching for in our collection
+     * @return true if exists else false
+     *
+     */
     @Override
     public boolean contains(Object value){
         ListNode node = firstNode;
@@ -150,6 +223,13 @@ public class LinkedListIndexedCollection extends Collection {
         return false;
     }
 
+    /**
+     * Removes first element in collection which has value equal to {@param value}
+     *
+     * @param value element that we want to remove
+     * @return true if element is removed in other cases return false
+     */
+
     @Override
     public boolean remove(Object value){
 
@@ -159,6 +239,11 @@ public class LinkedListIndexedCollection extends Collection {
         remove(index);
         return true;
     }
+
+    /**
+     * Copies our collection to array
+     * @return array of objects
+     */
 
     @Override
     public Object[] toArray(){
@@ -176,6 +261,10 @@ public class LinkedListIndexedCollection extends Collection {
         return arr;
     }
 
+    /**
+     * For each value in collection we call proccesor.process
+     * @param processor instance of class Processor
+     */
     @Override
     public void forEach(Processor processor){
         ListNode node = firstNode;
@@ -186,18 +275,41 @@ public class LinkedListIndexedCollection extends Collection {
         }
     }
 
+    /**
+     * Clears list by setting {@code firstNode} and {@code lastNode} to null, java garbage collector takes care rest
+     * Sets size to 0
+     */
     @Override
     public void clear(){
         firstNode = lastNode = null;
         size = 0;
     }
 
-
+    /**
+     * Class that help's in implementing linked list and it represents one node in list
+     */
 
     private static class ListNode{
+        /**
+         * references to the previous node if it exists
+         */
         private ListNode prevNode;
+        /**
+         * references to the next node if it exists
+         */
         private ListNode nextNode;
+        /**
+         * Value of the node
+         */
         Object value;
+
+        /**
+         *
+         * @param prevNode reference to the previous node, it can be null
+         * @param nextNode reference to the next node, it can be null
+         * @param value value of the node
+         *
+         */
 
         public ListNode(ListNode prevNode, ListNode nextNode, Object value){
             this.prevNode = prevNode;
