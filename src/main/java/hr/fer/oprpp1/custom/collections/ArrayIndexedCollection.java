@@ -161,7 +161,7 @@ public class ArrayIndexedCollection extends Collection{
 
     /**
      *
-     * @return site of collection
+     * @return size of collection
      */
     @Override
     public int size(){
@@ -183,7 +183,7 @@ public class ArrayIndexedCollection extends Collection{
     /**
      * Removes first element in collection which has value equal to {@param value}
      *
-     * @param value
+     * @param value element that we want remove from collection
      * @return true if element is removed in other cases return false
      */
     @Override
