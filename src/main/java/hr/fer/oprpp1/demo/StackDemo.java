@@ -2,7 +2,17 @@ package hr.fer.oprpp1.demo;
 
 import hr.fer.oprpp1.custom.collections.ObjectStack;
 
+/**
+ * Using our own stack implementation to do postfix calculations
+ * Throws IllegalArgumentException if {@param args} lenght is not equal to 1
+ * All operands and values must be separated by blank space
+ */
 public class StackDemo {
+    /**
+     * Program starts from this method
+     *
+     * @param args has exactly one postfix expression
+     */
     public static void main(String[] args) {
         if(args.length != 1) throw new IllegalArgumentException("Argument not valid");
         String[] arr = args[0].split(" ");
@@ -12,6 +22,11 @@ public class StackDemo {
         else System.out.println("Expression evaluates to "+ stack.pop() + ".");
     }
 
+    /**
+     *
+     * @param arr String array of all operands and value from postfix expression
+     * @param stack instance of ObjectStack where we store values and temporary results
+     */
     private static void calculate(String[] arr, ObjectStack stack) {
         for(String element : arr) {
             if (!element.matches("[+\\-/*%]")) stack.push(element);
