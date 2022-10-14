@@ -1,4 +1,4 @@
-package hr.fer.oprpp1.demo;
+package hr.fer.oprpp1.custom.collections.demo;
 
 import hr.fer.oprpp1.custom.collections.ObjectStack;
 
