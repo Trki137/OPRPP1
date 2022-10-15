@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" time="0" errors="0" skipped="0">
+<testsuite tests="32" failures="28" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" time="0.032" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1.1+2-6"/>
@@ -27,7 +27,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\Program Files\Maven\apache-maven-3.8.5-bin\apache-maven-3.8.5\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1250"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-18.0.1.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\MinGW\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\gnupg\bin;C:\Program Files\Java\jdk-18.0.1.1;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Maven\apache-maven-3.8.5-bin\apache-maven-3.8.5\bin;C:\dev\tooling\flutter\bin;C:\Program Files\dotnet\;C:\Users\Asus\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Asus\AppData\Local\Programs\Python\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\MinGW\bin;C:\Users\Asus\AppData\Local\Microsoft\WindowsApps;C:\MinGW\Bin;C:\Users\Asus\AppData\Local\Programs\Microsoft VS Code\bin;;C:\Users\Asus\AppData\Local\Microsoft\WindowsApps;C:\Users\Asus\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2022.1.2\bin;;C:\Users\Asus\.dotnet\tools;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-18.0.1.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Python39\Scripts\;C:\Python39\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\MinGW\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MongoDB\Server\5.0\bin;C:\Program Files\PostgreSQL\14\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\gnupg\bin;C:\Program Files\Java\jdk-18.0.1.1;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Maven\apache-maven-3.8.5-bin\apache-maven-3.8.5\bin;C:\dev\tooling\flutter\bin;C:\Program Files\dotnet\;%NVM_HOME%;%NVM_SYMLINK%;C:\Users\Asus\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Asus\AppData\Local\Programs\Python\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\MinGW\bin;C:\Users\Asus\AppData\Local\Microsoft\WindowsApps;C:\MinGW\Bin;C:\Users\Asus\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Asus\AppData\Local\Microsoft\WindowsApps;C:\Users\Asus\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2022.1.2\bin;;C:\Users\Asus\.dotnet\tools;C:\Users\Asus\AppData\Roaming\nvm;C:\Program Files\nodejs;."/>
     <property name="maven.conf" value="C:\Program Files\Maven\apache-maven-3.8.5-bin\apache-maven-3.8.5/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="62.0"/>
@@ -61,9 +61,199 @@
     <property name="sun.stdout.encoding" value="cp852"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testSize" time="0">
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveMiddleElement" time="0.003">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.add(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.add(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveMiddleElement(ArrayIndexedCollectionTest.java:187)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveLastElement" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(int)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveLastElement(ArrayIndexedCollectionTest.java:198)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectMiddle" time="0">
     <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null
-	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testSize(ArrayIndexedCollectionTest.java:20)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectMiddle(ArrayIndexedCollectionTest.java:252)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectNull" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectNull(ArrayIndexedCollectionTest.java:233)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testGetWithValidArgument" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.get(int)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.get(int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testGetWithValidArgument(ArrayIndexedCollectionTest.java:153)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithInvalidArgument" time="0.011">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithInvalidArgument(ArrayIndexedCollectionTest.java:161)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.lambda$testRemoveWithInvalidArgument$5(ArrayIndexedCollectionTest.java:161)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 17 more
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectFirst" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectFirst(ArrayIndexedCollectionTest.java:242)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertIntoFirstPosition" time="0.001">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.insert(Object, int)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.insert(Object, int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertIntoFirstPosition(ArrayIndexedCollectionTest.java:107)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectLast" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.insert(Object, int)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.insert(Object, int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithObjectLast(ArrayIndexedCollectionTest.java:262)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testConstructorWithInitSize" time="0.003"/>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testConstructorWithNoParam" time="0"/>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testConstructorWithCollAndInitSize" time="0.001">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.&lt;init&gt;(ArrayIndexedCollection.java:38)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testConstructorWithCollAndInitSize(ArrayIndexedCollectionTest.java:73)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testConstructorWithColl" time="0">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.&lt;init&gt;(ArrayIndexedCollection.java:38)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.&lt;init&gt;(ArrayIndexedCollection.java:53)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testConstructorWithColl(ArrayIndexedCollectionTest.java:64)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertWithInvalidPosition2" time="0.002">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertWithInvalidPosition2(ArrayIndexedCollectionTest.java:91)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.lambda$testInsertWithInvalidPosition2$1(ArrayIndexedCollectionTest.java:91)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 17 more
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testGetWithInvalidPosition" time="0.001">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testGetWithInvalidPosition(ArrayIndexedCollectionTest.java:136)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.get(int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.lambda$testGetWithInvalidPosition$3(ArrayIndexedCollectionTest.java:136)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 17 more
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertWithNullValue" time="0.001"/>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertWithInvalidPosition" time="0.001">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertWithInvalidPosition(ArrayIndexedCollectionTest.java:83)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.insert(Object, int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.lambda$testInsertWithInvalidPosition$0(ArrayIndexedCollectionTest.java:83)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 17 more
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testGetWithInvalidPosition2" time="0.001">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IndexOutOfBoundsException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testGetWithInvalidPosition2(ArrayIndexedCollectionTest.java:145)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.lambda$testGetWithInvalidPosition2$4(ArrayIndexedCollectionTest.java:145)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 17 more
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithInvalidArgument2" time="0.002">
+    <failure message="Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveWithInvalidArgument2(ArrayIndexedCollectionTest.java:170)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.lambda$testRemoveWithInvalidArgument2$6(ArrayIndexedCollectionTest.java:170)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 17 more
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveFirstElement" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(int)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.remove(int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testRemoveFirstElement(ArrayIndexedCollectionTest.java:178)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testAddingNullValue" time="0.001"/>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testIndexOfNonExistingElement" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.indexOf(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.indexOf(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testIndexOfNonExistingElement(ArrayIndexedCollectionTest.java:290)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testIndexOfNullExistingElement" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.indexOf(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.indexOf(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testIndexOfNullExistingElement(ArrayIndexedCollectionTest.java:299)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testIndexOfNull" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.indexOf(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.indexOf(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testIndexOfNull(ArrayIndexedCollectionTest.java:281)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testAddingValue" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.add(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.add(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testAddingValue(ArrayIndexedCollectionTest.java:327)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertAtEnd" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertAtEnd(ArrayIndexedCollectionTest.java:127)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testContainsFalse" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.contains(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.contains(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testContainsFalse(ArrayIndexedCollectionTest.java:216)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testContainsTrue" time="0.001">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.contains(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.contains(Object)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testContainsTrue(ArrayIndexedCollectionTest.java:224)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testToArray" time="0">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.toArray()&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.toArray()&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testToArray(ArrayIndexedCollectionTest.java:309)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertInMiddle" time="0.001">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.insert(Object, int)&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.insert(Object, int)&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testInsertInMiddle(ArrayIndexedCollectionTest.java:117)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testSize" time="0.001">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.size()&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testSize(ArrayIndexedCollectionTest.java:208)
+</failure>
+  </testcase>
+  <testcase classname="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest" name="hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testClear" time="0.001">
+    <failure message="Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.clear()&quot; because &quot;this.arrayWithNoParams&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;hr.fer.oprpp1.custom.collections.ArrayIndexedCollection.clear()&quot; because &quot;this.arrayWithNoParams&quot; is null
+	at hr.fer.oprpp1.custom.collections.ArrayIndexedCollectionTest.testClear(ArrayIndexedCollectionTest.java:272)
 </failure>
   </testcase>
 </testsuite>
