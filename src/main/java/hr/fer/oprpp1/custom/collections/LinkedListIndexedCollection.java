@@ -277,16 +277,6 @@ public class LinkedListIndexedCollection extends Collection {
         size = 0;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        ListNode node = firstNode;
-        while (node != null){
-            sb.append(node.value).append(" -> ");
-            node = node.nextNode;
-        }
-        return sb.toString();
-    }
 
     /**
      * Searches node in O(n/2 +1)
