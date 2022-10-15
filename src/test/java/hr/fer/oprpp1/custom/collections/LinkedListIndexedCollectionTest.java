@@ -183,6 +183,30 @@ public class LinkedListIndexedCollectionTest {
     }
 
     /**
+     * Testing if returns false if we want to remove null value
+     */
+    @Test
+    public void testRemoveElementWithNullValue(){
+        assertFalse(emptyLinkedList.remove(null));
+    }
+
+    /**
+     * Testing if returns false if we want to remove element with value that doesn't exists
+     */
+    @Test
+    public void testRemoveElementWithNoExistingValue(){
+        assertFalse(emptyLinkedList.remove("this doesn exists"));
+    }
+
+    /**
+     * Testing if returns true if we want to remove elemet with value that exists
+     */
+    @Test
+    public void testRemoveExistingElement(){
+        assertTrue(emptyLinkedList.remove("Test1"));
+    }
+
+    /**
      * Testing if it returns true if value exists in list
      */
 
